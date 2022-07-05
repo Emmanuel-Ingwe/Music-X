@@ -9,10 +9,10 @@ const title = document.querySelector('#title');
 const cover = document.querySelector('#cover');
 
 // SoNGS TITLES
-const songs = ['2', 'borra borra', 'show me off', 'call me everyday', '4', '5', '6', 'posty cooped up'];
+const songs = ['2', 'borra borra', 'show me off', 'call me everyday', '4', '5', '6', 'borrowedLove'];
 
 // Keep Track Of Songs
-let songIndex = 2;
+let songIndex = 7;
 
 // Initially load song
 loadSong(songs[songIndex]);
@@ -46,7 +46,9 @@ playBtn.addEventListener('click', () => {
 
     if (isPlaying) {
         pauseSong();
+        audio.pause();
     } else {
+        audio.play();
         playSong();
     }
 });
