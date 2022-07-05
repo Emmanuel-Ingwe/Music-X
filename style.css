@@ -117,7 +117,7 @@ body {
 .action-btn {
     background-color: #fff;
     border: 0;
-    color: #dfdbdf;
+    color: #220322;
     font-size: 20px;
     cursor: pointer;
     padding: 10px;
@@ -160,7 +160,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
     margin: 10px 0;
-    height: 4px;
+    height: 6px;
     width: 100%;
 }
 

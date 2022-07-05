@@ -12,7 +12,7 @@ const cover = document.querySelector('#cover');
 const songs = ['2', 'posty cooped up', 'show me off', 'call me everyday', '4', '5', '6', 'borrowedLove'];
 
 // Keep Track Of Songs
-let songIndex = 1;
+let songIndex = 0;
 
 // Initially load song
 loadSong(songs[songIndex]);
@@ -26,16 +26,16 @@ function loadSong(song) {
 
 function playSong() {
     musicContainer.classList.add('play');
-    playBtn.querySelector('i.fas').innerHTML = '=';
-    playBtn.querySelector('i.fas').innerText = '/';
+    playBtn.querySelector('span.fas').innerHTML = 'X';
+    playBtn.querySelector('span.fas').innerText = '=';
 
     audio.play();
 }
 
 function pauseSong() {
     musicContainer.classList.remove('play');
-    playBtn.querySelector('i.fas').innerText = '/';
-    playBtn.querySelector('i.fas').innerHTML = '=';
+    playBtn.querySelector('span.fas').innerText = '=';
+    playBtn.querySelector('span.fas').innerHTML = 'X';
 
     audio.pause();
 }
@@ -64,6 +64,12 @@ function nextSong() {
     playSong();
 }
 
+function updateProgress(e) {
+    const { duration, currentTime } = e.srcElement;
+    const progressPercent = (currentTime / duration) * 100;
+    progress.style.width = `${progressPercent}%`;
+}
+
 // Event Listener
 playBtn.addEventListener('click', () => {
     const isPlaying = musicContainer.classList.contains('play');
@@ -79,3 +85,5 @@ playBtn.addEventListener('click', () => {
 
 prevBtn.addEventListener('click', prevSong);
 nextBtn.addEventListener('click', nextSong);
+
+audio.addEventListener('timeupdate', updateProgress);
