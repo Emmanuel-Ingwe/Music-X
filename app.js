@@ -35,7 +35,7 @@ function playSong() {
 function pauseSong() {
     musicContainer.classList.remove('play');
     playBtn.querySelector('span.fas').innerText = '=';
-    playBtn.querySelector('span.fas').innerHTML = 'X';
+    playBtn.querySelector('span.fas').innerHTML = 'x';
 
     audio.pause();
 }
