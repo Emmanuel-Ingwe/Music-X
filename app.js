@@ -9,17 +9,17 @@ const title = document.querySelector('#title');
 const cover = document.querySelector('#cover');
 
 // SoNGS TITLES
-const songs = ['callmeeveryday', 'Asa-Show-Me-Off', 'bora bora'];
+const songs = ['2', '1', '16', '3', '4', '5', '6', '12'];
 
 // Keep Track Of Songs
-let songIndex = 2;
+let songIndex = 5;
 
 // Initially load song
 loadSong(songs[songIndex]);
 
 // UPdate song
 function loadSong(song) {
-    title.innerHTML = song;
-    audio.src = `music/${song}.mp3`;
-    cover.src = `images/${song}.jpg`;
+    title.innerText = song;
+    audio.src = `songs/${song}.mp3`;
+    cover.src = `images/${song}.png`;
 }
