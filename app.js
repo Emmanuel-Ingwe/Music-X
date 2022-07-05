@@ -92,7 +92,7 @@ playBtn.addEventListener('click', () => {
 });
 
 prevBtn.addEventListener("click", prevSong);
-nextBtn.addEventListener('click', nextSong);
+nextBtn.addEventListener("click", nextSong);
 
 audio.addEventListener('timeupdate', updateProgress);
 
