@@ -171,3 +171,9 @@ body {
     width: 0%;
     transition: width 0.1s linear;
 }
+
+footer {
+    position: absolute;
+    bottom: 0;
+    margin: 10px;
+}
