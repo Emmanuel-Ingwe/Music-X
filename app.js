@@ -12,7 +12,7 @@ const cover = document.querySelector('#cover');
 const songs = ['2', 'posty cooped up', 'show me off', 'call me everyday', '4', '5', '6', 'borrowedLove'];
 
 // Keep Track Of Songs
-let songIndex = 0;
+let songIndex = 2;
 
 // Initially load song
 loadSong(songs[songIndex]);
