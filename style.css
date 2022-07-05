@@ -169,11 +169,12 @@ body {
     border-radius: 5px;
     height: 100%;
     width: 0%;
-    transition: width 0.1s linear;
+    transition: width 0.11s linear;
 }
 
 footer {
     position: absolute;
     bottom: 0;
     margin: 10px;
+    text-decoration: line-through;
 }
