@@ -9,10 +9,10 @@ const title = document.querySelector('#title');
 const cover = document.querySelector('#cover');
 
 // SoNGS TITLES
-const songs = ['2', '1', '16', '3', '4', '5', '6', '12'];
+const songs = ['2', 'borra borra', 'show me off', 'call me everyday', '4', '5', '6', 'posty cooped up'];
 
 // Keep Track Of Songs
-let songIndex = 5;
+let songIndex = 7;
 
 // Initially load song
 loadSong(songs[songIndex]);
@@ -23,3 +23,24 @@ function loadSong(song) {
     audio.src = `songs/${song}.mp3`;
     cover.src = `images/${song}.png`;
 }
+
+function playSong() {
+    musicContainer.classList.add('play');
+    playBtn.querySelector('i.fas').innerHTML = '=';
+    playBtn.querySelector('i.fas').innerText = '/';
+}
+
+function pauseSong() {
+    musicContainer.classList.add('play');
+}
+
+// Event Listener
+playBtn.addEventListener('click', () => {
+    const isPlaying = musicContainer.classList.contains('play');
+
+    if (isPlaying) {
+        pauseSong();
+    } else {
+        playSong();
+    }
+});
