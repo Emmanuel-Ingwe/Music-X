@@ -12,7 +12,7 @@ const cover = document.querySelector('#cover');
 const songs = ['2', 'borra borra', 'show me off', 'call me everyday', '4', '5', '6', 'posty cooped up'];
 
 // Keep Track Of Songs
-let songIndex = 7;
+let songIndex = 2;
 
 // Initially load song
 loadSong(songs[songIndex]);
@@ -28,10 +28,16 @@ function playSong() {
     musicContainer.classList.add('play');
     playBtn.querySelector('i.fas').innerHTML = '=';
     playBtn.querySelector('i.fas').innerText = '/';
+
+    audio.play();
 }
 
 function pauseSong() {
-    musicContainer.classList.add('play');
+    musicContainer.classList.remove('play');
+    playBtn.querySelector('i.fas').innerText = '/';
+    playBtn.querySelector('i.fas').innerHTML = '=';
+
+    audio.pause();
 }
 
 // Event Listener
